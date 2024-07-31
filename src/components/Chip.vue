@@ -36,12 +36,12 @@ const emit = defineEmits(['remove'])
   border-radius: 1rem;
   font-size: 0.85rem;
   background-color: var(--color-background-mute);
-  color: var(--vt-c-white-soft);
+  color: var(--color-text);
 }
 .chip__title {
   min-width: 10ch;
   padding-right: 0.75rem;
-  border-right: 1px solid var(--vt-c-white-soft);
+  border-right: 1px solid var(--color-border);
   margin-right: 0.5rem;
 }
 .chip__button {
@@ -49,11 +49,16 @@ const emit = defineEmits(['remove'])
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--vt-c-white-soft);
+  color: var(---color-text);
   line-height: 1;
   transition: background-color 0.5s ease;
 }
 .chip__button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+  .chip__button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 </style>
