@@ -81,7 +81,7 @@
             v-for="(item, idi) in selectedRef"
             :key="idi"
             :title="item"
-            @click="removeSelection(item)"
+            @remove="removeSelection(item)"
           />
           <div v-if="selectedRef.length === 0">None</div>
         </div>

@@ -6,12 +6,15 @@
     </header>
     
     <main>
-      <div v-if="selected.length > 0" class="chips">
+      <div 
+        v-if="selected.length > 0" 
+        class="chips"
+      >
         <Chip
           v-for="(item, idi) in selected"
           :key="idi"
           :title="item"
-          @click="removeSelection(item)"
+          @remove="removeSelection(item)"
         />
       </div>
       <div v-else>None</div>
@@ -74,9 +77,9 @@ const removeSelection = (item) => {
     selected.value.splice(index, 1)
   }
 }
-const updateSelected = (newArray, callback) => {
+const updateSelected = (newArray, closeFn) => {
   selected.value = toValue(newArray)
-  callback()
+  closeFn()
 }
 </script>
 
