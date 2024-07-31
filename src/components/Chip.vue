@@ -4,6 +4,7 @@
 
     <button 
       type="button" 
+      title="Unselect"
       class="chip__button"
       @click="emit('remove')"
       @keypress.enter="emit('remove')"
